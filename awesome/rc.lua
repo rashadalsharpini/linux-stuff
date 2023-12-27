@@ -370,7 +370,7 @@ globalkeys = my_table.join(
         {description = "rofi theme selector", group = "super"}),
     awful.key({ modkey }, "t", function () awful.util.spawn( terminal ) end,
         {description = "terminal", group = "super"}),
-    awful.key({ modkey }, "v", function () awful.util.spawn( "pavucontrol" ) end,
+    awful.key({ modkey }, "s", function () awful.util.spawn( "pavucontrol" ) end,
         {description = "pulseaudio control", group = "super"}),
     --awful.key({ modkey }, "u", function () awful.screen.focused().mypromptbox:run() end,
           --{description = "run prompt", group = "super"}),
@@ -474,7 +474,7 @@ globalkeys = my_table.join(
 
     -- Hotkeys Awesome
 
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "h",      hotkeys_popup.show_help,
         {description = "show help", group="awesome"}),
 
     -- Tag browsing with modkey
