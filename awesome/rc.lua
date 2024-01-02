@@ -382,7 +382,7 @@ globalkeys = my_table.join(
     -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end),
     awful.key({modkey},"e",function() awful.util.spawn(filemanager)end), 
-
+    awful.key({modkey},"w",function() awful.util.spawn("wall")end), 
     -- ctrl + shift + ...
     awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
 
