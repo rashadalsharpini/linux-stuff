@@ -314,7 +314,7 @@ globalkeys = my_table.join(
     -- dmenu
     awful.key({ modkey   }, "d",
     function ()
-        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn jetbrainsmononerdfont:bold:pixelsize=14",
+        awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn jetbrainsmononerdfont:bold:pixelsize=13",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
 	end,
     {description = "show dmenu", group = "hotkeys"}),
@@ -992,8 +992,8 @@ awful.rules.rules = {
     { rule = { class = "Geany" },
           properties = { maximized = false, floating = false } },
 
-    -- { rule = { class = "Thunar" },
-    --     properties = { maximized = false, floating = false } },
+    { rule = { class = "Thunar" },
+         properties = { maximized = false, floating = false, opacity = 0.85 } },
 
     { rule = { class = "Gimp*", role = "gimp-image-window" },
           properties = { maximized = true } },
