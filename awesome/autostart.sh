@@ -24,13 +24,13 @@ run volumeicon
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-feh --bg-fil /home/rashadalsharpini/Pictures/background/good_stuff/background09.jpg &
+feh --bg-fil /home/rashadalsharpini/Pictures/background/good_stuff/049.jpg &
 #language 
 setxkbmap -layout us,ara -option grp:alt_shift_toggle
 #run applications from startup
 run xfce4-clipman
 run gromit-mpx
-run conky-toggle
+#run conky-toggle
 #run firefox
 #run atom
 #run dropbox
