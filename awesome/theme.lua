@@ -322,11 +322,11 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            spr,
+            --spr,
             arrl_ld,
             arrl_dl,
             wibox.widget.systray(),
-            spr,
+            --spr,
             arrl_ld,
             arrl_dl,
             keyboardlayout,
