@@ -195,6 +195,7 @@ alias pp='cat /sys/class/power_supply/BAT0/capacity'
 alias sdx='sudo killall Xorg'
 #alias ls='lsd'
 #alias l='lsd'
+alias setb='feh --bg-scale'
 alias cd...='cd..;clear;cd..'
 #list
 alias ls="ls --color=auto"
