@@ -330,7 +330,7 @@ function theme.at_screen_connect(s)
             arrl_ld,
             arrl_dl,
             keyboardlayout,
-            spr,
+            
             arrl_ld,
             -- wibox.container.background(mpdicon, theme.bg_focus),
             -- wibox.container.background(theme.mpd.widget, theme.bg_focus),
