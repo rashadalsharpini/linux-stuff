@@ -138,7 +138,7 @@ awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
 -- awful.util.tagnames = { "", "", "", "", "" }
 -- awful.util.tagnames = {"𝖋𝖎𝖑𝖊𝖘 ", "𝖌𝖎𝖙 ","𝕺𝖇𝖘𝖎𝖉𝖎𝖆𝖓 ", "𝖉𝖎𝖘𝖈𝖔𝖗𝖉 ", "𝖒𝖚𝖘𝖎𝖈 ", "𝖑𝖎𝖓𝖐𝖊𝖉𝖎𝖓 "}
-awful.util.tagnames = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " " };
+awful.util.tagnames = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
     awful.layout.suit.tile,

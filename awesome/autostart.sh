@@ -30,6 +30,7 @@ setxkbmap -layout us,ara -option grp:alt_shift_toggle
 #run applications from startup
 run xfce4-clipman
 run gromit-mpx
+run youtube-music
 #run conky-toggle
 #run firefox
 #run atom
