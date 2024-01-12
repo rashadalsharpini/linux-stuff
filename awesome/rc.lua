@@ -362,8 +362,8 @@ globalkeys = my_table.join(
         {description = "conky-toggle", group = "super"}),
     awful.key({ modkey, modkey1 }, "c", function () awful.util.spawn( "killall conky" ) end,
         {description = "conky killall", group = "super"}),
-   -- awful.key({ modkey }, "e", function () awful.util.spawn( editorgui ) end,
-     --   {description = "run gui editor", group = "super"}),
+    awful.key({ modkey }, "o", function () awful.util.spawn( "obsidian" ) end,
+        {description = "obsidian", group = "super"}),
     --awful.key({ modkey }, "h", function () awful.util.spawn( "urxvt -T 'htop task manager' -e htop" ) end,
         --{description = "htop", group = "super"}),
     awful.key({ modkey }, "r", function () awful.util.spawn( "rofi-theme-selector" ) end,
@@ -378,7 +378,7 @@ globalkeys = my_table.join(
       {description = "exit", group = "hotkeys"}),
     awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
         {description = "Kill proces", group = "hotkeys"}),
-
+    
     -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end),
     awful.key({modkey},"e",function() awful.util.spawn(filemanager)end), 
@@ -985,7 +985,7 @@ awful.rules.rules = {
 
     -- Set applications to be maximized at startup.
     -- find class or role via xprop command
-
+    
     { rule = { class = editorgui },
           properties = { maximized = true } },
 
