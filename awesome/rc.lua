@@ -385,8 +385,8 @@ globalkeys = my_table.join(
     awful.key({modkey},"w",function() awful.util.spawn("wall")end), 
     -- ctrl + shift + ...
     awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
-
-
+    awful.key({modkey1, "Shift" } , "n", function() awful.util.spawn("ooo") end),
+    awful.key({modkey1, "Shift" } , "p", function() awful.util.spawn("ooo") end),
     -- ctrl+alt +  ...
     awful.key({ modkey1, altkey   }, "w", function() awful.util.spawn( "arcolinux-welcome-app" ) end,
         {description = "ArcoLinux Welcome App", group = "alt+ctrl"}),
