@@ -312,7 +312,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "w", function () awful.util.spawn( browser1 ) end,
         {description = browser1, group = "function keys"}),
     -- dmenu
-    awful.key({ modkey   }, "d",
+    awful.key({ modkey   }, "F12",
     function ()
         awful.spawn(string.format("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn jetbrainsmononerdfont:bold:pixelsize=14",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
@@ -354,7 +354,7 @@ globalkeys = my_table.join(
         {description = mediaplayer , group = "function keys" }),
     awful.key({ modkey }, "F11", function () awful.util.spawn( "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" ) end,
         {description = "rofi fullscreen" , group = "function keys" }),
-    awful.key({ modkey }, "F12", function () awful.util.spawn( "rofi -show drun" ) end,
+    awful.key({ modkey }, "d", function () awful.util.spawn( "rofi -show drun" ) end,
         {description = "rofi" , group = "function keys" }),
 
     -- super + ...
