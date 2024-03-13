@@ -679,8 +679,8 @@ globalkeys = my_table.join(
               --{description = "show weather", group = "widgets"}),
 
     -- Brightness
-    awful.key({ modkey  } , "Up", function() awful.util.spawn("brightnessctl set +10%") end),
-    awful.key({ modkey   } , "Down", function() awful.util.spawn("brightnessctl set 10%-") end),
+    awful.key({ modkey  } , "Up", function() awful.util.spawn("brightnessctl set +5%") end),
+    awful.key({ modkey   } , "Down", function() awful.util.spawn("brightnessctl set 5%-") end),
     --    awful.key({ modkey},"Up", "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
     --          {description = "+10%", group = "hotkeys"}),
     --awful.key({ modkey},"Down", "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
