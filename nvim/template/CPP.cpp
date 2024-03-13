@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // 48-57 -> 0-9  65-90 -> A-Z 97-122 -> a-z
-#define fastio()                                                               \
+#define FAST()                                                               \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(NULL);                                                               
 #define ll long long
@@ -20,18 +20,8 @@ using namespace std;
 void inp(vector<int>&arr){for(auto&it:arr)cin>>it;}
 void out(vector<int>&arr){for(auto&it:arr)cout<<it<<" ";cout<<endl;}
 
-void RAS() {
-// write code Here
-}
+int main() {
+  FAST();
 
-int32_t main() {
-
-  //  freopen("whereami.in", "r", stdin);
-  //  freopen("whereami.out", "w", stdout);
-  fastio();
-  int t = 1;
-  //cin>>t;
-  while (t--)
-    RAS();  
   return 0;
 }
