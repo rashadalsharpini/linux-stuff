@@ -375,10 +375,8 @@ globalkeys = my_table.join(
     --awful.key({ modkey }, "u", function () awful.screen.focused().mypromptbox:run() end,
           --{description = "run prompt", group = "super"}),
     awful.key({ modkey }, "x",  function () awful.util.spawn( "archlinux-logout" ) end,
-      {description = "exit", group = "hotkeys"}),
-    awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
-        {description = "Kill proces", group = "hotkeys"}),
-    
+      {description = "exit", group = "hotkeys"}), 
+    awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end, {description = "Kill proces", group = "hotkeys"}),
     -- super + shift + ...
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn( filemanager ) end),
     awful.key({modkey},"e",function() awful.util.spawn(filemanager)end), 
@@ -387,7 +385,7 @@ globalkeys = my_table.join(
     awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
     awful.key({ modkey1, "Shift"  } , "n", function() awful.util.spawn("ooo") end),
     awful.key({ modkey1, "Shift"  } , "p", function() awful.util.spawn("ooo") end),
-
+    awful.key({modkey},"p",function() awful.util.spawn("ScreenShotsel")end), 
     -- ctrl+alt +  ...
     awful.key({ modkey1, altkey   }, "w", function() awful.util.spawn( "arcolinux-welcome-app" ) end,
         {description = "ArcoLinux Welcome App", group = "alt+ctrl"}),
