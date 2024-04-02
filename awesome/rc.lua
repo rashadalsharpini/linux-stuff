@@ -319,7 +319,7 @@ globalkeys = my_table.join(
 	end,
     {description = "show dmenu", group = "hotkeys"}),
 
-    awful.key({ modkey,"Shift" }, "d",
+    awful.key({ modkey }, "d",
     function ()
         awful.spawn(string.format("rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/awesome/rofi/launcher2.rasi",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
@@ -354,7 +354,7 @@ globalkeys = my_table.join(
         {description = mediaplayer , group = "function keys" }),
     awful.key({ modkey }, "F11", function () awful.util.spawn( "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" ) end,
         {description = "rofi fullscreen" , group = "function keys" }),
-    awful.key({ modkey }, "d", function () awful.util.spawn( "rofi -show drun" ) end,
+    awful.key({ modkey,"Shift" }, "d", function () awful.util.spawn( "rofi -show drun" ) end,
         {description = "rofi" , group = "function keys" }),
 
     -- super + ...
