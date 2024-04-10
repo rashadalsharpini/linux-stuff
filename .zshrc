@@ -158,10 +158,6 @@ alias sdx='sudo killall Xorg'
 alias setb='feh --bg-scale'
 alias cd...='cd..;clear;cd..'
 
-function cd
-    builtin cd $argv; and ls
-  end
-
 # show the list of packages that need this package - depends mpv as example
 function_depends()  {
     search=$(echo "$1")
