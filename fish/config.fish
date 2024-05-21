@@ -581,6 +581,7 @@ alias bb='neofetch battery'
 alias pp='cat /sys/class/power_supply/BAT0/capacity'
 alias sdx='sudo killall Xorg'
 alias sdh='sudo killall Hyprland'
+alias mm='neofetch memory'
 # pacman
 alias sps='sudo pacman -S'
 alias spr='sudo pacman -R'
