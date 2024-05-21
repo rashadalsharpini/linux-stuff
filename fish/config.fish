@@ -612,6 +612,7 @@ alias updte="sudo pacman -Syyu"
 alias updqte="sudo pacman -Syyu"
 alias upqll="paru -Syu --noconfirm"
 alias upal="paru -Syu --noconfirm"
+alias upd='sudo pacman -Syyu'
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
