@@ -582,6 +582,9 @@ alias pp='cat /sys/class/power_supply/BAT0/capacity'
 alias sdx='sudo killall Xorg'
 alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
+# git
+alias gaa='git add --all'
+alias gmc='git commit -m'
 # pacman
 alias sps='sudo pacman -S'
 alias spr='sudo pacman -R'
