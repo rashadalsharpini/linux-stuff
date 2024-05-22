@@ -49,7 +49,7 @@ cmd open ${{
 			lf -remote "send toggle"
 		done &
 		;;
-	audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
+	audio/*|video/x-ms-asf) mpv --loop=3 --audio-display=no $f ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 	text/html)  librewolf $fx  >/dev/null 2>&1 &;;
   
