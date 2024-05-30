@@ -133,7 +133,13 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 ### ALIASES ###
-
+# my stuff
+alias bb='neofetch battery'
+alias pp='cat /sys/class/power_supply/BAT0/capacity'
+alias sdx='sudo killall Xorg'
+alias sdh='sudo killall Hyprland'
+alias mm='neofetch memory'
+alias kb='killall brave'
 #list
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -150,9 +156,6 @@ alias sprs='sudo pacman -Rs'
 alias sprdd='sudo pacman -Rdd'
 alias spqo='sudo pacman -Qo'
 alias spsii='sudo pacman -Sii'
-alias bb='neofetch battery'
-alias pp='cat /sys/class/power_supply/BAT0/capacity'
-alias sdx='sudo killall Xorg'
 #alias ls='lsd'
 #alias l='lsd'
 alias setb='feh --bg-scale'
