@@ -14,10 +14,12 @@ alias ll='lsd -l'
 # Handy change dir shortcuts
 abbr .. 'cd ..'
 abbr ... 'cd ../..'
+abbr .1 'cd ..'
+abbr .2 'cd ../..'
 abbr .3 'cd ../../..'
 abbr .4 'cd ../../../..'
 abbr .5 'cd ../../../../..'
-
+abbr .k 'killall'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr mkdir 'mkdir -p'
 
@@ -583,6 +585,11 @@ alias sdx='sudo killall Xorg'
 alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
 alias kb='killall brave'
+alias cd...='cd ../..'
+if test -d "$HOME/.local/bin"
+  set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+end
+
 # git
 alias gaa='git add --all'
 alias gmc='git commit -m'

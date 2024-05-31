@@ -6,3 +6,4 @@
 	st = status
 	cm = commit -m
 	a = add --all
+	l = log
