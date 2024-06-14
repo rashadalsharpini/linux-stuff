@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 file=$1
 
 if [[ $file == *.cpp ]]
@@ -9,6 +8,6 @@ then
     rm main
 elif [[ $file == *.py ]]
 then
-    ipython "$file"
+    python "$file"
 fi
 
