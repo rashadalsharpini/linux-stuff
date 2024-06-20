@@ -368,7 +368,7 @@ globalkeys = my_table.join(
         --{description = "htop", group = "super"}),
     awful.key({ modkey }, "r", function () awful.util.spawn( "rofi-theme-selector" ) end,
         {description = "rofi theme selector", group = "super"}),
-    awful.key({ modkey }, "t", function () awful.util.spawn( terminal ) end,
+    awful.key({ modkey }, "t", function () awful.util.spawn( "timer" ) end,
         {description = "terminal", group = "super"}),
     awful.key({ modkey }, "s", function () awful.util.spawn( "pavucontrol" ) end,
         {description = "pulseaudio control", group = "super"}),
@@ -385,7 +385,7 @@ globalkeys = my_table.join(
     awful.key({ modkey1, "Shift"  }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
     awful.key({ modkey1, "Shift"  } , "n", function() awful.util.spawn("ooo") end),
     awful.key({ modkey1, "Shift"  } , "p", function() awful.util.spawn("ooo") end),
-    awful.key({modkey},"p",function() awful.util.spawn("ScreenShotsel")end), 
+    awful.key({modkey, "Shift"},"s",function() awful.util.spawn("ScreenShotsel")end), 
     -- ctrl+alt +  ...
     awful.key({ modkey1, altkey   }, "w", function() awful.util.spawn( "arcolinux-welcome-app" ) end,
         {description = "ArcoLinux Welcome App", group = "alt+ctrl"}),
@@ -993,9 +993,11 @@ awful.rules.rules = {
     { rule = { class = "Geany" },
           properties = { maximized = false, floating = false } },
 
-    { rule = { class = "Thunar" },
+    { rule = { class = "filemanager" },
          properties = { maximized = false, floating = false, opacity = 0.85 } },
 
+    { rule = { class = "code" },
+         properties = { maximized = false, floating = false, opacity = 0.85 } },
     { rule = { class = "Gimp*", role = "gimp-image-window" },
           properties = { maximized = true } },
 
