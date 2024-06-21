@@ -20,13 +20,24 @@ fi
 
 seconds=$((minutes * 60))
 
-while [ $seconds -gt 0 ]; do
-  mins=$((seconds / 60))
-  secs=$((seconds % 60))
-  printf "%02d:%02d\033[0K\r" $mins $secs
-  sleep 1
-  : $((seconds--))
-done
+(
+  while [ $seconds -gt 0 ]; do
+    mins=$((seconds / 60))
+    secs=$((seconds % 60))
+    echo "# $(printf "%02d:%02d" $mins $secs)"
+    echo $(( (minutes * 60 - seconds) * 100 / (minutes * 60) ))
+    sleep 1
+    : $((seconds--))
+  done
+) |
+zenity --progress \
+  --text="" \
+  --percentage=0 \
+  --auto-close \
+  --no-cancel \
+  --no-markup \
+  --width=80 \
+  --height=70
 
 # Send notification that the timer is up
 notify-send "Time's up"
