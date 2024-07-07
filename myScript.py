@@ -1,4 +1,7 @@
 from collections import Counter
+from math import gcd
+from bisect import bisect_left, bisect_right
+
 
 def isprime(n):
     if n <= 1:
@@ -25,12 +28,20 @@ def find_mex(S):
             return i
     return len(S)
 
+# xor_val = [0]*int((3*pow(10,5)+1))
+# for p in range(1, int((3*pow(10,5)+1))):
+#     xor_val[p] = xor_val[p - 1] ^ p
+## prefix sum
+# for i in range(1, n):
+#     a[i] += a[i - 1]
 
 def solve():
     pass
 
 
 if __name__ == '__main__':
-    #for _ in range(int(input())):
-    solve()
+    t = 1
+    # t = int(input())
+    for _ in range(t):
+        solve()
     
