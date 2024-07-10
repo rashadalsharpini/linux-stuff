@@ -1,5 +1,5 @@
 from collections import Counter
-from math import gcd
+from math import gcd, lcm
 from bisect import bisect_left, bisect_right
 
 
