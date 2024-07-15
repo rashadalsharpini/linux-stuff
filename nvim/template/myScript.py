@@ -30,7 +30,7 @@ def find_mex(S):
             return i
     return len(S)
 
-
+# better on memory but with time log(b) unlike the shift >> whichs faster but with more memory
 def fast_power(a, b):
     res = 1
     while b:

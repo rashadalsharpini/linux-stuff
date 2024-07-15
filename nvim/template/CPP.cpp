@@ -46,6 +46,7 @@ ostream &operator<<(ostream &output, const vector<T> &data) {
   return output;
 }
 ll mod = 1000000007;
+//better on memory but with time log(b) unlike the shift >> whichs faster but with more memory
 int fast_power(int a, int b) {
     int res = 1;
     while (b) {
