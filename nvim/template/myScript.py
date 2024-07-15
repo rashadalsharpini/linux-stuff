@@ -1,7 +1,9 @@
 from collections import Counter
 from math import gcd, lcm
 from bisect import bisect_left, bisect_right
+from time import time
 
+MOD = 10 ** 9 + 7
 
 def isprime(n):
     if n <= 1:
@@ -28,6 +30,15 @@ def find_mex(S):
             return i
     return len(S)
 
+
+def fast_power(a, b):
+    res = 1
+    while b:
+        if b & 1:
+            res *= a % MOD
+        a *=a % MOD
+        b >>= 1
+    return res
 # xor_val = [0]*int((3*pow(10,5)+1))
 # for p in range(1, int((3*pow(10,5)+1))):
 #     xor_val[p] = xor_val[p - 1] ^ p
@@ -40,8 +51,11 @@ def solve():
 
 
 if __name__ == '__main__':
+    # start = time()
     t = 1
     # t = int(input())
     for _ in range(t):
         solve()
+    # end = time()
+    # print(end - start)
     

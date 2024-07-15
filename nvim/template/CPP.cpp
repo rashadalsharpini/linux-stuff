@@ -15,7 +15,7 @@ using namespace std;
 #define debug_itr(...) 0
 #define debug_bits(...) 0
 #endif
-#define fastio()                                                               \
+#define fastio                                                               \
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(NULL);
 
@@ -45,6 +45,16 @@ ostream &operator<<(ostream &output, const vector<T> &data) {
     output << x << " ";
   return output;
 }
+ll mod = 1000000007;
+int fast_power(int a, int b) {
+    int res = 1;
+    while (b) {
+        if (b & 1) res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
+    }
+    return res;
+}
 // 48-57 -> 0-9  65-90 -> A-Z 97-122 -> a-z
 
 void solve() {
@@ -54,7 +64,7 @@ int32_t main() {
 
   //  freopen("whereami.in", "r", stdin);
   //  freopen("whereami.out", "w", stdout);
-  fastio();
+  fastio
   int t = 1;
   // cin>>t;
   while (t--)
