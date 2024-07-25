@@ -38,9 +38,7 @@ template <typename T> istream &operator>>(istream &input, vector<T> &data) {
     input >> x;
   return input;
 }
-template <typename T>
-ostream &operator<<(ostream &output, const vector<T> &data) {
-
+template <typename T> ostream &operator<<(ostream &output, const vector<T> &data) {
   for (const T &x : data)
     output << x << " ";
   return output;
