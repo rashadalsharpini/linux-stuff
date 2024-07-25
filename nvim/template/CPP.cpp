@@ -45,16 +45,32 @@ ostream &operator<<(ostream &output, const vector<T> &data) {
     output << x << " ";
   return output;
 }
-ll mod = 1000000007;
-//better on memory but with time log(b) unlike the shift >> whichs faster but with more memory
+int mod = 1000000007;
 int fast_power(int a, int b) {
     int res = 1;
     while (b) {
-        if (b & 1) res = res * a % mod;
-        a = a * a % mod;
+        if (b & 1) res *= a % mod;
+        a *= a % mod;
         b >>= 1;
     }
     return res;
+}
+vector<int> primeFactors(int n) {
+    vector<int> factors;
+    while (n % 2 == 0) {
+        factors.push_back(2);
+        n /= 2;
+    }
+    for (int i = 3; i <= sqrt(n); i += 2) {
+        while (n % i == 0) {
+            factors.push_back(i);
+            n /= i;
+        }
+    }
+    if (n > 2) {
+        factors.push_back(n);
+    }
+    return factors;
 }
 // 48-57 -> 0-9  65-90 -> A-Z 97-122 -> a-z
 
@@ -62,13 +78,12 @@ void solve() {
 
 }
 int32_t main() {
-
-  //  freopen("whereami.in", "r", stdin);
-  //  freopen("whereami.out", "w", stdout);
-  fastio
-  int t = 1;
-  // cin>>t;
-  while (t--)
-    solve();
-  return 0;
+    //  freopen("whereami.in", "r", stdin);
+    //  freopen("whereami.out", "w", stdout);
+    fastio
+    int t = 1;
+    // cin>>t;
+    while (t--)
+        solve();
+    return 0;
 }
