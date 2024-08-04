@@ -586,6 +586,7 @@ alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
 alias kb='killall brave'
 alias cd...='cd ../..'
+alias vf='nvim $(fzf --preview="cat {}")'
 if test -d "$HOME/.local/bin"
   set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 end
