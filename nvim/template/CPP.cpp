@@ -19,15 +19,19 @@ using namespace std;
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(NULL);
 
-#define ll long long
+typedef long long ll;
 #define all(a) (a).begin(), (a).end()
 #define sz(a) (int)(a).size()
 #define pb push_back
+#define mp make_pair
+#define f first
+#define s second
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
 #define vll vector<ll>
 #define vi vector<int>
-#define pii pair<int,int>
+#define pi pair<int,int>
+#define pll pair<long long, long long>
 #define OO 2e9
 #define endl "\n"
 const int dx[]{0, 1, 0, -1, -1, -1, 1, 1};
@@ -43,7 +47,7 @@ template <typename T> ostream &operator<<(ostream &output, const vector<T> &data
     output << x << " ";
   return output;
 }
-int mod = 1000000007;
+int mod = 1e9+7;
 int fast_power(int a, int b) {
     int res = 1;
     while (b) {
@@ -80,7 +84,7 @@ int32_t main() {
     //  freopen("whereami.out", "w", stdout);
     fastio
     int t = 1;
-    // cin>>t;
+    /*cin>>t;*/
     while (t--)
         solve();
     return 0;
