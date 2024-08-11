@@ -19,7 +19,7 @@ using namespace std;
   ios_base::sync_with_stdio(false);                                            \
   cin.tie(NULL);
 
-typedef long long ll;
+#define int long long
 #define all(a) (a).begin(), (a).end()
 #define sz(a) (int)(a).size()
 #define pb push_back
@@ -28,10 +28,8 @@ typedef long long ll;
 #define s second
 #define yes cout << "YES\n"
 #define no cout << "NO\n"
-#define vll vector<ll>
 #define vi vector<int>
 #define pi pair<int,int>
-#define pll pair<long long, long long>
 #define OO 2e9
 #define endl "\n"
 const int dx[]{0, 1, 0, -1, -1, -1, 1, 1};
@@ -47,12 +45,12 @@ template <typename T> ostream &operator<<(ostream &output, const vector<T> &data
     output << x << " ";
   return output;
 }
-int mod = 1e9+7;
+int MOD = 1e9+7;
 int fast_power(int a, int b) {
     int res = 1;
     while (b) {
-        if (b & 1) res *= a % mod;
-        a *= a % mod;
+        if (b & 1) res *= a % MOD;
+        a *= a % MOD;
         b >>= 1;
     }
     return res;
