@@ -460,7 +460,7 @@ set ascii_17 "
 
 
 function fish_greeting
-    set variables $ascii_1 $ascii_2 $ascii_3 $ascii_4 $ascii_5 $ascii_6 $ascii_7 $ascii_11 $ascii_12 $ascii_14 $ascii_16 $ascii_15 $ascii_17
+    #set variables $ascii_1 $ascii_2 $ascii_3 $ascii_4 $ascii_5 $ascii_6 $ascii_7 $ascii_11 $ascii_12 $ascii_14 $ascii_16 $ascii_15 $ascii_17
 
     set random_index (shuf -i 1-13 -n 1)
 
@@ -587,6 +587,7 @@ alias mm='neofetch memory'
 alias kb='killall brave'
 alias cd...='cd ../..'
 alias vf='nvim $(fzf --preview="cat {}")'
+alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 if test -d "$HOME/.local/bin"
   set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 end
