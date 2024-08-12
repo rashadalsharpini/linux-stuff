@@ -20,6 +20,7 @@ using namespace std;
   cin.tie(NULL);
 
 #define int long long
+#define double long double
 #define all(a) (a).begin(), (a).end()
 #define sz(a) (int)(a).size()
 #define pb push_back
