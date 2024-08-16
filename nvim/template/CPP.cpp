@@ -56,8 +56,8 @@ int fast_power(int a, int b) {
     }
     return res;
 }
-vector<int> primeFactors(int n) {
-    vector<int> factors;
+vi primeFactors(int n) {
+    vi factors;
     while (n % 2 == 0) {
         factors.push_back(2);
         n /= 2;
