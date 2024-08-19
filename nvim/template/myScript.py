@@ -3,7 +3,7 @@ from math import gcd, lcm
 from bisect import bisect_left, bisect_right
 from time import time
 
-MOD = 10 ** 9 + 7
+MOD = 1e9 + 7
 
 def isprime(n):
     if n <= 1:
@@ -36,7 +36,7 @@ def fast_power(a, b):
     while b:
         if b & 1:
             res *= a % MOD
-        a *=a % MOD
+        a *= a % MOD
         b >>= 1
     return res
 # xor_val = [0]*int((3*pow(10,5)+1))
