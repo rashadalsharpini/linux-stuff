@@ -5,14 +5,14 @@
 local M = {}
 
 M.ui = {
-  -- theme = "tokyodark",
-  theme = "tokyodark", -- default theme
+  -- theme = "bearded-arc",
+  theme = "bearded-arc", -- default theme
 
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
   },
-  theme_toggle = { "tokyodark", "catppuccin" },
+  theme_toggle = { "bearded-arc", "catppuccin" },
   transparency = false,
   nvdash = {
     load_on_startup = true,

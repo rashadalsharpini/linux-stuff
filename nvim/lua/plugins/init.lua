@@ -30,11 +30,12 @@ local plugins = {
     config = function()
       require("competitest").setup {
         compile_command = {
-          c = { exec = "gcc", args = { "-DMOHAMED", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-          cpp = { exec = "g++", args = { "-std=c++17", "-DMOHAMED", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", "-g" } },
+          c = { exec = "gcc", args = { "-DRashad", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
+          cpp = { exec = "g++", args = { "-std=c++17", "-DRashad", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", "-g" } },
           py = { exec = "python", args = { "$(FNAME)" } },
           rust = { exec = "rustc", args = { "$(FNAME)" } },
           java = { exec = "javac", args = { "$(FNAME)" } },
+          cs = { exec = "csc", args = { "$(FNAME)" } }
         },
         received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)/$(PROBLEM).$(FEXT)",
         received_contests_directory = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)",
@@ -45,10 +46,10 @@ local plugins = {
         received_contests_prompt_directory = false,
         received_contests_prompt_extension = false,
         open_received_contests = false,
-        -- received_files_extension = "cpp",
-        received_files_extension = "py",
+        received_files_extension = "cpp",
+        -- received_files_extension = "py",
         template_file = {
-          -- cpp = "~/.config/nvim/template/CPP.cpp",
+          cpp = "~/.config/nvim/template/CPP.cpp",
           py = "~/.config/nvim/template/myScript.py"
         },
       }
