@@ -7,13 +7,16 @@
 #export ZSH="/home/$USER/.oh-my-zsh"
 #installation via paru -S oh-my-zsh-git
 export ZSH=/usr/share/oh-my-zsh/
+export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-ZSH_THEME="strug"
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+ZSH_THEME="archcraft"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,7 +79,7 @@ ZSH_THEME="strug"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
@@ -133,6 +136,14 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 ### ALIASES ###
+
+# List Directory
+alias ls="lsd"
+alias l="lsd"
+alias la="lsd -a"
+alias lla="lsd -la"
+alias lt="lsd --tree"
+alias ll='lsd -l'
 # my stuff
 alias bb='neofetch battery'
 alias pp='cat /sys/class/power_supply/BAT0/capacity'
@@ -140,26 +151,17 @@ alias sdx='sudo killall Xorg'
 alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
 alias kb='killall brave'
-#list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -alFh'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
-alias listdir="ls -d */ > list"
-alias ls='lsd'
-alias l='lsd'
+alias cd...='cd ../..'
+alias vf='nvim $(fzf --preview="cat {}")'
+alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 #pacman
 alias sps='sudo pacman -S'
+alias spss='sudo pacman -Ss'
 alias spr='sudo pacman -R'
 alias sprs='sudo pacman -Rs'
 alias sprdd='sudo pacman -Rdd'
 alias spqo='sudo pacman -Qo'
 alias spsii='sudo pacman -Sii'
-#alias ls='lsd'
-#alias l='lsd'
-alias setb='feh --bg-scale'
-alias cd...='cd..;clear;cd..'
 
 # show the list of packages that need this package - depends mpv as example
 function_depends()  {
@@ -257,9 +259,7 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-#switch between displaymanager or bootsystem
-alias toboot="sudo /usr/local/bin/arcolinux-toboot"
-alias togrub="sudo /usr/local/bin/arcolinux-togrub"
+#switch between lightdm and sddm
 alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
 alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
 alias toly="sudo pacman -S ly --noconfirm --needed ; sudo systemctl enable ly.service -f ; echo 'Ly is active - reboot now'"
@@ -381,9 +381,6 @@ alias nf="$EDITOR ~/.config/fish/config.fish"
 alias nneofetch="$EDITOR ~/.config/neofetch/config.conf"
 alias nplymouth="sudo $EDITOR /etc/plymouth/plymouthd.conf"
 alias nvconsole="sudo $EDITOR /etc/vconsole.conf"
-alias nenvironment="sudo $EDITOR /etc/environment"
-alias nloader="sudo $EDITOR /boot/efi/loader/loader.conf"
-
 
 #reading logs with bat
 alias lcalamares="bat /var/log/Calamares.log"
@@ -438,13 +435,6 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 alias xdw="ls /usr/share/wayland-sessions"
-
-#give a list of the kernels installed
-alias kernel="ls /usr/lib/modules"
-alias kernels="ls /usr/lib/modules"
-
-#am I on grub or systemd-boot
-alias boot="sudo bootctl status | grep Product"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -511,13 +501,15 @@ alias awa="arcolinux-welcome-app"
 #git
 alias rmgitcache="rm -r ~/.cache/git"
 alias grh="git reset --hard"
-
+export TERMINAL="alacritty"
 #pamac
 alias pamac-unlock="sudo rm /var/tmp/pamac/dbs/db.lock"
 
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
+alias opennewterm="st >/dev/null 2>&1 & disown" #open terminal in the same dir
+bindkey '^[[28;6;5~' "opennewterm\n"
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
@@ -538,4 +530,8 @@ alias personal='cp -Rf /personal/* ~'
 #sysinfo-retro
 #cpufetch
 #colorscript random
-#hyfetch
+set -o vi
+
+function cd() {
+    builtin cd "$@" && lsd
+}
