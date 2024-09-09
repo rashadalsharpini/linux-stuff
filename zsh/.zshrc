@@ -144,6 +144,7 @@ alias la="lsd -a"
 alias lla="lsd -la"
 alias lt="lsd --tree"
 alias ll='lsd -l'
+
 # my stuff
 alias bb='neofetch battery'
 alias pp='cat /sys/class/power_supply/BAT0/capacity'
@@ -151,9 +152,21 @@ alias sdx='sudo killall Xorg'
 alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
 alias kb='killall brave'
-alias cd...='cd ../..'
 alias vf='nvim $(fzf --preview="cat {}")'
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+
+# Navigating up directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Kill all instances of a process
+alias .k='killall'
+
 #pacman
 alias sps='sudo pacman -S'
 alias spss='sudo pacman -Ss'
