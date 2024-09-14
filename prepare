@@ -1,20 +1,11 @@
 sudo pacman -Syyu
-mkdir clone
-cd clone
-git clone https://github.com/rashadalsharpini/linux-stuff
-git clone https://github.com/rashadalsharpini/nvim
-git clone https://github.com/rashadalsharpini/obsidian
-cd
-sudo pacman -S fish
-chsh -s /usr/bin/fish
-sudo pacman -S neovim
-sudo pacman -S kitty
-sudo cp -r ~/clone/nvim ~/.config/
-sudo cp -r ~/clone/fish ~/.config/
+mkdir ~/clone
+git clone https://github.com/rashadalsharpini/nvim ~/.config
+git clone https://github.com/rashadalsharpini/obsidian ~/clone
+sudo cp -r ~/clone/linux-stuff/fish ~/.config/
 sudo cp -r ~/clone/linux-stuff/kitty ~/.config/
-sudo pacman -S btop
-sudo pacman -S lsd
-sudo pacman -S lf
-sudo pacman -S mpv
-sudo pacman -S obsidian
-
+sudo cp -r ~/clone/linux-stuff/bin/ ~/.local/
+sudo cp -r ~/clone/linux-stuff/lf/ ~/.config/
+sudo cp ~/clone/linux-stuff/zsh/.zshrc ~/
+sudo pacman -S btop lsd lf mpv kitty neovim fish yt-dlp zsh betterlockscreen xclip xfcec4-clipman-plugin
+chsh -s /usr/bin/fish
