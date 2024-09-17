@@ -588,6 +588,10 @@ alias kb='killall brave'
 alias cd...='cd ../..'
 alias vf='nvim $(fzf --preview="cat {}")'
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+function cpro
+    cp -r $argv[1] $argv[2] &   # Copy files or directories in the background
+    progress -mp (jobs -lp)      # Track the progress using the last job's PID
+end
 if test -d "$HOME/.local/bin"
   set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 end

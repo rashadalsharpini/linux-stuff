@@ -7,5 +7,5 @@ sudo cp -r ~/clone/linux-stuff/kitty ~/.config/
 sudo cp -r ~/clone/linux-stuff/bin/ ~/.local/
 sudo cp -r ~/clone/linux-stuff/lf/ ~/.config/
 sudo cp ~/clone/linux-stuff/zsh/.zshrc ~/
-sudo pacman -S btop lsd lf mpv kitty neovim fish yt-dlp zsh betterlockscreen xclip xfcec4-clipman-plugin
+sudo pacman -S btop lsd lf mpv kitty neovim fish yt-dlp zsh betterlockscreen xclip xfcec4-clipman-plugin zathura zathura-pdf-poppler progress
 chsh -s /usr/bin/fish

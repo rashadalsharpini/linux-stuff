@@ -16,7 +16,7 @@ export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="archcraft"
+ZSH_THEME="archcraft-dwm"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -154,6 +154,11 @@ alias mm='neofetch memory'
 alias kb='killall brave'
 alias vf='nvim $(fzf --preview="cat {}")'
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+cpro() {
+    cp -r "$1" "$2" &   # Copy files or directories in the background
+    progress -mp $!      # Track the progress of the last background process
+}
+
 
 # Navigating up directories
 alias ..='cd ..'
