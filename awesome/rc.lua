@@ -407,6 +407,8 @@ globalkeys = my_table.join(
         {description = browser3, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "i", function() awful.util.spawn("nitrogen") end,
         {description = nitrogen, group = "alt+ctrl"}),
+    awful.key({ modkey}, "l", function() awful.util.spawn( "betterlockscreen -l" ) end,
+        {description = scrlocker, group = "super+l"}),
     awful.key({ modkey1, altkey   }, "k", function() awful.util.spawn( "archlinux-logout" ) end,
         {description = scrlocker, group = "alt+ctrl"}),
     awful.key({ modkey1, altkey   }, "l", function() awful.util.spawn( "archlinux-logout" ) end,
