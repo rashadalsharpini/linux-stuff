@@ -586,8 +586,9 @@ alias sdh='sudo killall Hyprland'
 alias mm='neofetch memory'
 alias kb='killall brave'
 alias cd...='cd ../..'
-alias vf='nvim $(fzf --preview="cat {}")'
+alias nvf='nvim $(fzf --preview="cat {}")'
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+alias battery='upower -i  $(upower -e | grep \'BAT\')'
 function cpro
     cp -r $argv[1] $argv[2] &   # Copy files or directories in the background
     progress -mp (jobs -lp)      # Track the progress using the last job's PID

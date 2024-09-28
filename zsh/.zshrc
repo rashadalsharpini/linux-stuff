@@ -154,6 +154,7 @@ alias mm='neofetch memory'
 alias kb='killall brave'
 alias vf='nvim $(fzf --preview="cat {}")'
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+alias battery='upower -i  $(upower -e | grep \'BAT\')'
 cpro() {
     cp -r "$1" "$2" &   # Copy files or directories in the background
     progress -mp $!      # Track the progress of the last background process
