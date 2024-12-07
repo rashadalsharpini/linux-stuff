@@ -5,12 +5,12 @@ if status is-interactive
 end
 
 # List Directory
-alias ls="lsd"
-alias l="lsd"
+alias ls="eza -1   --icons=auto"
+alias l="eza -1   --icons=auto"
 alias la="lsd -a"
-alias lla="lsd -la"
-alias lt="lsd --tree"
-alias ll='lsd -l'
+alias lla="eza -lha --icons=auto --sort=name --group-directories-first"
+alias lt="eza --icons=auto --tree"
+alias ll='eza -lh  --icons=auto'
 # Handy change dir shortcuts
 abbr .. 'cd ..'
 abbr ... 'cd ../..'

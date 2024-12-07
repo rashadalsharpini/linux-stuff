@@ -1,14 +1,8 @@
 #!/bin/bash
 
-# Echo entering root mode
-echo "Entering the root mode ==>"
-
-# Run all commands as root
-sudo -i <<EOF
-
 # System update
 echo 'Updating your system...'
-pacman -Syyu --noconfirm
+sudo pacman -Syyu --noconfirm
 
 # Create the clone directory if it doesn't exist
 mkdir -p ~/clone
@@ -19,19 +13,17 @@ cp -rf ~/clone/linux-stuff/kitty ~/.config/
 cp -rf ~/clone/linux-stuff/bin ~/.local/
 cp -rf ~/clone/linux-stuff/lf ~/.config/
 cp -f ~/clone/linux-stuff/zsh/.zshrc ~/
+cp -rf ~/clone/linux-stuff/mpv ~/.config/
+
 
 # Clone repositories into specific directories
 git clone https://github.com/rashadalsharpini/nvim ~/.config/nvim
 git clone https://github.com/rashadalsharpini/obsidian ~/clone/obsidian
 
 # Install required packages without confirmation
-pacman -S --noconfirm btop lsd lf mpv kitty neovim fish yt-dlp zsh \
-betterlockscreen xclip xfce4-clipman-plugin zathura zathura-pdf-poppler progress
+sudo pacman -S --noconfirm btop lsd lf mpv kitty neovim fish yt-dlp zsh \
+betterlockscreen xclip xfce4-clipman-plugin zathura zathura-pdf-poppler progress obsidian 
 
 # Change default shell to fish non-interactively
 chsh -s /usr/bin/fish
-
-EOF
-
-echo "Setup complete! Please restart your terminal for changes to take effect."
 
