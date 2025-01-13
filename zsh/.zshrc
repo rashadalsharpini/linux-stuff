@@ -14,7 +14,7 @@ export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 ZSH_THEME="archcraft-dwm"
 
