@@ -219,7 +219,7 @@ bindsym $mod+Shift+Right move right
 
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
-bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab exec --no-startup-id rofi -show
 
 # navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
