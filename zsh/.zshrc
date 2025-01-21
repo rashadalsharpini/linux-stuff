@@ -19,6 +19,13 @@ source $ZSH/oh-my-zsh.sh
 # ZSH_THEME="archcraft-dwm"
 # Oh My Posh
 eval "$(oh-my-posh --init --shell zsh --config ~/.local/share/oh-my-posh/themes/EDM115-newline.omp.json)"
+
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Customize the color for commands
+ZSH_HIGHLIGHT_STYLES[command]='fg=blue,bold'
+
+# Customize the color for paths
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
