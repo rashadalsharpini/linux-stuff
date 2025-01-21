@@ -2,24 +2,18 @@
 
 ---
 
-y copy
 
-d cut 
+| command | action |
+| ------- | ------ |
+|   q     | quit   |
+|   w     | terminal in this dir   |
+|   e     | edit file   |
+|   G     | go to the bottom of the list   |
+|   g     | go to the top of the list   |
+|   D     | delete   |
+|   r     | rename   |
+|   /     | search   |
+|   p     | paste   |
+|   d     | cut   |
+|   y     | yank/copy   |
 
-p paste
-
-/ search
-
-r rename
-
-D delete
-
-g go to the top of the list 
-
-G go to the bottom of the list 
-
-e edit file nvim
-
-w terminal in this dir
-
-q quit
