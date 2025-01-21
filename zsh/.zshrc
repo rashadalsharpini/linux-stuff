@@ -16,8 +16,9 @@ export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 # export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="archcraft-dwm"
-
+# ZSH_THEME="archcraft-dwm"
+# Oh My Posh
+eval "$(oh-my-posh --init --shell zsh --config ~/.local/share/oh-my-posh/themes/EDM115-newline.omp.json)"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
