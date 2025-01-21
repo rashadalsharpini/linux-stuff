@@ -16,4 +16,5 @@
 |   p     | paste   |
 |   d     | cut   |
 |   y     | yank/copy   |
+|   :     | enter command mode   |
 
