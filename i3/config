@@ -62,25 +62,12 @@ set $secondMonitor HDMI-2
 
 exec --no-startup-id ~/.local/bin/getReady.sh
 # current displays
-# exec --no-startup-id xrandr --output eDP-1 --left-of HDMI-2 --auto
 exec --no-startup-id xrandr --output $firstMonitor --right-of $secondMonitor --auto
-# Other Examples
-
-#set $firstMonitor DP3
-#set $secondMonitor LVDS1
-
-#set $firstMonitor DVI-I-0
-#set $secondMonitor HDMI-0
-
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
-
-#set $firstMonitor DVI-I-1
-#set $secondMonitor DVI-D-1
-
-#set $firstMonitor HDMI-1
-#set $secondMonitor HDMI-2
-
+# my stuff
+bindsym $mod+l exec --no-startup-id betterlockscreen -l 
+bindsym Shift+ctrl+n exec notify-send "اتقي الله"
+bindsym Print exec --no-startup-id gnome-screenshot -i
+bindsym Shift+Print exec --no-startup-id ~/.local/bin/ocr
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
 workspace 3 output $secondMonitor
@@ -94,9 +81,6 @@ workspace 10 output $secondMonitor
 
 
 
-# my stuff
-bindsym $mod+l exec --no-startup-id betterlockscreen -l 
-bindsym Shift+ctrl+n exec notify-send "اتقي الله"
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -535,8 +519,6 @@ bindsym control+mod1+s exec --no-startup-id spotify;focus
 # bindsym $mod+Shift+s exec ScreenShotsel
 # bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 bindsym Control+Print exec --no-startup-id xfce4-screenshooter
-bindsym Shift+Print exec --no-startup-id ~/.local/bin/ocr
-bindsym Print exec --no-startup-id gnome-screenshot -i
 # bindsym Print exec --no-startup-id flameshot gui
 # bindsym shift+Print exec --no-startup-id shutter
 
