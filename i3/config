@@ -60,14 +60,19 @@ set $mod Mod4
 set $firstMonitor eDP-1
 set $secondMonitor HDMI-2
 
-exec --no-startup-id ~/.local/bin/getReady.sh
 # current displays
 exec --no-startup-id xrandr --output $firstMonitor --right-of $secondMonitor --auto
 # my stuff
+exec --no-startup-id ~/.local/bin/getReady.sh
 bindsym $mod+l exec --no-startup-id betterlockscreen -l 
 bindsym Shift+ctrl+n exec notify-send "اتقي الله"
 bindsym Print exec --no-startup-id gnome-screenshot -i
 bindsym Shift+Print exec --no-startup-id ~/.local/bin/ocr
+bindsym $mod+Tab exec --no-startup-id rofi -show
+
+
+
+
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
 workspace 3 output $secondMonitor
@@ -203,7 +208,6 @@ bindsym $mod+Shift+Right move right
 
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
-bindsym $mod+Tab exec --no-startup-id rofi -show
 
 # navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
