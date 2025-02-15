@@ -63,12 +63,12 @@ set $secondMonitor HDMI-2
 # current displays
 exec --no-startup-id xrandr --output $firstMonitor --right-of $secondMonitor --auto
 # my stuff
-exec --no-startup-id ~/.local/bin/getReady.sh
+exec --no-startup-id ~/.local/bin/getReady.sh &
 bindsym $mod+l exec --no-startup-id betterlockscreen -l 
 bindsym Shift+ctrl+n exec notify-send "اتقي الله"
 bindsym Print exec --no-startup-id gnome-screenshot -i
 bindsym Shift+Print exec --no-startup-id ~/.local/bin/ocr
-bindsym $mod+Tab exec --no-startup-id rofi -show
+bindsym $mod+Tab exec --no-startup-id "rofi -show window -theme ~/.config/rofi/launchers/type-6/style-7.rasi"
 
 
 
@@ -116,7 +116,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # start rofi
-bindsym $mod+d exec --no-startup-id ~/.config/i3/launcher/launcher.sh
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-6/launcher.sh
 
 # start xfce4-appfinder
 bindsym mod1+F2 exec --no-startup-id xfce4-appfinder --collapsed
