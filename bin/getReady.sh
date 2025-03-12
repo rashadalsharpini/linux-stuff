@@ -2,7 +2,8 @@ setxkbmap -layout us,ara -option grp:alt_shift_toggle
 xmodmap -e "keycode 135 = Super_R"
 setxkbmap -option caps:escape
 variety &
-xfce4-clipman &
+# xfce4-clipman &
+greenclip daemon &
 blueberry-tray &
 exit 0
 # ~/.local/bin/monitor.sh
