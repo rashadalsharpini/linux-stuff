@@ -39,6 +39,7 @@ exec --no-startup-id xrandr --output $firstMonitor --right-of $secondMonitor --a
 # my stuff
 exec --no-startup-id ~/.local/bin/getReady.sh &
 bindsym $mod+ctrl+l exec --no-startup-id betterlockscreen -l 
+bindsym $mod+ctrl+shift+l exec --no-startup-id betterlockscreen -l & systemctl suspend 
 bindsym Shift+ctrl+n exec notify-send "اتقي الله"
 bindsym Print exec --no-startup-id gnome-screenshot -i
 bindsym Shift+Print exec --no-startup-id ~/.local/bin/ocr
