@@ -13,3 +13,8 @@ nnoremap y "+y
 vnoremap y "+y
 nnoremap yy "+yy
 nnoremap p "+p
+" Map Ctrl+i to Go to Implementation
+nnoremap <C-i> :action GotoImplementation<CR>
+
+" Map Ctrl+d to Go to Declaration
+nnoremap <C-d> :action GotoDeclaration<CR>
