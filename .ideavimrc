@@ -13,8 +13,14 @@ nnoremap y "+y
 vnoremap y "+y
 nnoremap yy "+yy
 nnoremap p "+p
+nnoremap d "+d
+vnoremap d "+d
+nnoremap dd "+dd
 " Map Ctrl+i to Go to Implementation
 nnoremap <C-i> :action GotoImplementation<CR>
 
 " Map Ctrl+d to Go to Declaration
 nnoremap <C-d> :action GotoDeclaration<CR>
+
+set ignorecase       " ignore case when searching
+set smartcase        " but if you use uppercase letters, match case
