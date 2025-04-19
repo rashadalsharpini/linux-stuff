@@ -33,3 +33,9 @@ nnoremap <C-d> :action GotoDeclaration<CR>
 
 set ignorecase       " ignore case when searching
 set smartcase        " but if you use uppercase letters, match case
+" Set leader key to space
+let mapleader = " "
+
+" Use <leader>/ to toggle line comment
+nmap <leader>/ :action CommentByLineComment<CR>
+vmap <leader>/ :action CommentByLineComment<CR>
