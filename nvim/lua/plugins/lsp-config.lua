@@ -25,14 +25,19 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       lspconfig.lua_ls.setup({})
       lspconfig.omnisharp.setup({
         cmd = { vim.fn.stdpath("data") .. "/mason/bin/omnisharp" },
         enable_roslyn_analyzers = true,
         organize_imports_on_format = true,
       })
-      lspconfig.clangd.setup({})
-      lspconfig.pylsp.setup({})
+      lspconfig.clangd.setup({
+        capabilities = capabilities
+      })
+      lspconfig.pylsp.setup({
+        capabilities = capabilities
+      })
     end
   },
 }

@@ -62,31 +62,4 @@ return {
       require("telescope").load_extension("ui-select")
     end
   },
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = { "rafamadriz/friendly-snippets" },
-    opts = {
-      history = true,
-      updateevents = "TextChanged,TextChangedI",
-    },
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load() -- Loads VSCode-style snippets
-      require("luasnip.loaders.from_lua").lazy_load({ paths = vim.fn.expand("~/.config/nvim/lua/snippets") })
-      -- Loads custom Lua snippets
-    end,
-  },
-  {
-    "goolord/alpha-nvim",
-    -- dependencies = { 'echasnovski/mini.icons' },
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      local startify = require("alpha.themes.startify")
-      -- available: devicons, mini, default is mini
-      -- if provider not loaded and enabled is true, it will try to use another provider
-      startify.file_icons.provider = "devicons"
-      require("alpha").setup(
-        startify.config
-      )
-    end,
-  },
 }
