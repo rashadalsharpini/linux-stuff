@@ -25,11 +25,14 @@ nnoremap d "+d
 vnoremap d "+d
 nnoremap dd "+dd
 
-" Map Ctrl+i to Go to Implementation
-nnoremap <C-i> :action GotoImplementation<CR>
+" gd → Go to Definition (common Vim usage)
+nnoremap gd :action GotoDefinition<CR>
 
-" Map Ctrl+d to Go to Declaration
-nnoremap <C-d> :action GotoDeclaration<CR>
+" gD → Go to Declaration (broader symbol declaration)
+nnoremap gD :action GotoDeclaration<CR>
+
+" gi → Go to Implementation (OOP style jump to concrete class/function)
+nnoremap gi :action GotoImplementation<CR>
 
 set ignorecase       " ignore case when searching
 set smartcase        " but if you use uppercase letters, match case
