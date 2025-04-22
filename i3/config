@@ -611,7 +611,7 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 ################# bar appearance                   
 
 bar {
- status_command exec env LC_TIME="en_US.UTF-8" i3status -c ~/.config/i3/i3status.conf
+ status_command exec env LC_TIME="en_US.UTF-8" i3blocks -c ~/.config/i3/i3blocks.conf
 
  height 25
    workspace_buttons yes

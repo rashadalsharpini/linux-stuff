@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Handle clicks
+case $BLOCK_BUTTON in
+    1) playerctl play-pause -p io.bassi.Amberol ;;  # Left click
+    2) playerctl stop -p io.bassi.Amberol ;;        # Middle click
+    3) playerctl next -p io.bassi.Amberol ;;        # Right click
+    4) playerctl previous -p io.bassi.Amberol ;;    # Scroll up
+    5) playerctl next -p io.bassi.Amberol ;;        # Scroll down
+esac
+
+# Display song title from io.bassi.Amberol
+artist=$(playerctl -p io.bassi.Amberol metadata artist 2>/dev/null)
+title=$(playerctl -p io.bassi.Amberol metadata title 2>/dev/null)
+
+if [ -z "$artist" ] && [ -z "$title" ]; then
+    echo "No music"
+else
+    echo "$artist - $title"
+fi
