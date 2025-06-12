@@ -299,16 +299,16 @@ return {
 	end,
 
 	entry = function(_, job)
-		local args = job.args or job
+		local arg = job.args or job
 		local command = Command("git")
-			:args({ "status", "--ignore-submodules=dirty", "--branch", "--show-stash", "--ahead-behind" })
-			:cwd(args[1])
+			:arg({ "status", "--ignore-submodules=dirty", "--branch", "--show-stash", "--ahead-behind" })
+			:cwd(arg[1])
 			:env("LANGUAGE", "en_US.UTF-8")
 			:stdout(Command.PIPED)
 		local output = command:output()
 
 		if output then
-			save(args[1], output.stdout)
+			save(arg[1], output.stdout)
 		end
 	end,
 }
