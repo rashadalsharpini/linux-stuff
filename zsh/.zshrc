@@ -1,7 +1,6 @@
-export ZSH=/usr/share/oh-my-zsh/
+export ZSH=/home/rashad/.oh-my-zsh/
 export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 
-source $ZSH/oh-my-zsh.sh
 ZSH_THEME="archcraft-dwm"
 # Oh My Posh
 # eval "$(oh-my-posh --init --shell zsh --config ~/.local/share/oh-my-posh/themes/EDM115-newline.omp.json)"
@@ -17,9 +16,6 @@ fi
 ####   ARCOLINUX SETTINGS   ####
 export PAGER='most'
 
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
 
 setopt GLOB_DOTS
 #share commands between terminal instances or not
@@ -451,4 +447,12 @@ bindkey '^[[28;6;5~' "opennewterm\n"
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
 set -o vi
+
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 

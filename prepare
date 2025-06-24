@@ -22,7 +22,7 @@ git clone https://github.com/rashadalsharpini/obsidian ~/clone/obsidian
 
 # Install required packages without confirmation
 sudo pacman -S --noconfirm btop lsd lf mpv kitty neovim fish yt-dlp zsh \
-betterlockscreen xclip xfce4-clipman-plugin zathura zathura-pdf-poppler progress obsidian 
+betterlockscreen xclip xfce4-clipman-plugin zathura zathura-pdf-poppler progress obsidian zsh-autosuggestions zsh-syntax-highlighting
 
 # Change default shell to fish non-interactively
 chsh -s /usr/bin/fish

@@ -193,7 +193,7 @@ default_orientation horizontal
 # bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-# Super + F in arcolinux is execute thunar
+# Super + F in arcolinux is execute nautilus --new-window
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -247,7 +247,7 @@ for_window [class="Vivaldi-stable"] focus
 # exec --no-startup-id code
 
 # File manager
-# exec --no-startup-id thunar
+# exec --no-startup-id nautilus --new-window
 
 # Mail clients
 # exec --no-startup-id evolution
@@ -399,12 +399,12 @@ bindsym $mod+F6 exec --no-startup-id vlc;focus
 # virtual machine
 bindsym $mod+F7 exec --no-startup-id virtualbox;focus
 # file management
-for_window [class="thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
-bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
-bindsym $mod+e exec --no-startup-id thunar;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
+for_window [class="nautilus --new-window"] focus
+bindsym $mod+F8 exec --no-startup-id nautilus --new-window;focus
+bindsym $mod+Shift+Return exec --no-startup-id nautilus --new-window;focus
+bindsym $mod+e exec --no-startup-id nautilus --new-window;focus
+bindsym $mod+Shift+KP_Enter exec --no-startup-id nautilus --new-window;focus
+bindsym control+mod1+b exec --no-startup-id nautilus --new-window;focus
 
 # Audio application
 bindsym $mod+F9 exec --no-startup-id lollypop;focus
