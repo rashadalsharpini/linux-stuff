@@ -49,6 +49,12 @@ bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 for_window [class="Gnome-pomodoro"] floating enable
 for_window [class="amberol"] floating enable
 
+# Power profile shortcuts
+bindsym $mod+F10 exec --no-startup-id powerprofilesctl set power-saver
+bindsym $mod+F11 exec --no-startup-id powerprofilesctl set balanced
+bindsym $mod+F12 exec --no-startup-id powerprofilesctl set performance
+
+
 
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
@@ -105,10 +111,10 @@ bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 # bindsym mod1+F5 exec --no-startup-id xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv
 
 # start rofi full
-bindsym $mod+F11 exec --no-startup-id "rofi -font 'Noto Sans 13' -theme-str 'window {width: 100%;height: 100%;}' -show drun"
+# bindsym $mod+F11 exec --no-startup-id "rofi -font 'Noto Sans 13' -theme-str 'window {width: 100%;height: 100%;}' -show drun"
 
 # start rofi small
-bindsym $mod+F12 exec --no-startup-id rofi -show drun -font "Noto Sans 13"
+# bindsym $mod+F12 exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
 ################# how to exit, logoff, suspend, ...
 
@@ -296,8 +302,6 @@ exec --no-startup-id volumeicon
 exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 
@@ -412,7 +416,7 @@ bindsym $mod+F9 exec --no-startup-id lollypop;focus
 # bindsym control+mod1+e exec --no-startup-id geary;focus
 
 # music
-bindsym $mod+F10 exec --no-startup-id spotify;focus
+# bindsym $mod+F10 exec --no-startup-id spotify;focus
 bindsym control+mod1+s exec --no-startup-id spotify;focus
 
 ################# screenshots                      
@@ -508,8 +512,8 @@ bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wal
 
 ################# audio settings                   
 
-  bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-  bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+  bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer sset Master '5%+'"
+  bindsym XF86AudioLowerVolume exec --no-startup-id "amixer sset Master '5%-'"
   bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 
   bindsym Pause exec --no-startup-id /usr/bin/playerctl play-pause
