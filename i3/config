@@ -31,7 +31,6 @@ set $mod Mod4
 
 
 
-
 # current displays
 set $firstMonitor eDP-1
 set $secondMonitor HDMI-2
