@@ -7,6 +7,8 @@ sudo pacman -Syyu --noconfirm
 # Create the clone directory if it doesn't exist
 mkdir -p ~/clone
 
+gitt clone https://github.com/rashadalsharpini/linux-stuff ~/clone/linux-stuff
+git clone https://github.com/rashadalsharpini/nvim ~/.config/nvim
 # Copy and overwrite configuration files
 cp -rf ~/clone/linux-stuff/fish ~/.config/
 cp -rf ~/clone/linux-stuff/kitty ~/.config/
@@ -17,14 +19,11 @@ cp -rf ~/clone/linux-stuff/mpv ~/.config/
 
 
 # Clone repositories into specific directories
-git clone https://github.com/rashadalsharpini/nvim ~/.config/nvim
-git clone https://github.com/rashadalsharpini/obsidian ~/clone/obsidian
 
 # Install required packages without confirmation
 sudo pacman -S --noconfirm btop lsd lf mpv kitty neovim fish yt-dlp zsh \
 betterlockscreen xclip xfce4-clipman-plugin zathura zathura-pdf-poppler progress obsidian zsh-autosuggestions zsh-syntax-highlighting \
-power-profiles-daemon
-
+power-profiles-daemon zen-browser-bin discord telegram-desktop nvidia nvidia-utils nvidia-settings nvidia-prime wine lutris
 # Change default shell to fish non-interactively
-chsh -s /usr/bin/fish
+chsh -s /usr/bin/zsh
 
