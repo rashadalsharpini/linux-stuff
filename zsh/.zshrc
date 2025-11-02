@@ -1,5 +1,5 @@
 export ZSH=/home/rashad/.oh-my-zsh/
-export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
+# export WINEPREFIX="/home/rashad/.local/share/wineprefixes/def32/"
 
 ZSH_THEME="archcraft-dwm"
 # Oh My Posh
@@ -51,7 +51,7 @@ alias l="lsd"
 alias la="lsd -a"
 alias lla="lsd -la"
 alias lt="lsd --tree"
-alias ll='lsd -l'
+alias ll='lsd -l --total-size'
 
 # my stuff
 alias bb='neofetch battery'
@@ -65,14 +65,36 @@ alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 alias battery="upower -i \$(upower -e | grep 'BAT')"
 alias graph="git log --oneline --all --graph --decorate"
 alias lg=lazygit
+alias zed=zeditor
 cpro() {
     cp -r "$1" "$2" &   # Copy files or directories in the background
     progress -mp $!      # Track the progress of the last background process
 }
 
-function cd() {
+# Check if zoxide is installed
+# zoxide-aware cd that prints an icon + pwd after z-jumps, and runs lsd after every cd
+if command -v zoxide &> /dev/null; then
+  cd() {
+    if [ $# -eq 0 ]; then
+      builtin cd ~ && lsd
+      return
+    elif [ -d "$1" ]; then
+      builtin cd "$@" && lsd
+      return
+    else
+      # Try zoxide jump; if successful print icon and cwd, then run lsd
+      z "$@" && { printf "\U000F17A9  %s\n" "$PWD"; lsd; } || { echo "Error: Directory not found"; return 1; }
+    fi
+  }
+else
+  # Fallback: normal cd + lsd
+  cd() {
     builtin cd "$@" && lsd
-}
+  }
+fi
+
+
+
 export PATH="$HOME/.dotnet/tools:$PATH"
 
 # Navigating up directories
@@ -458,3 +480,4 @@ if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; th
   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
+eval "$(zoxide init zsh)"
