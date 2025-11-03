@@ -49,7 +49,7 @@ fi
 alias ls="lsd"
 alias l="lsd"
 alias la="lsd -a"
-alias lla="lsd -la"
+alias lla="lsd -la --total-size"
 alias lt="lsd --tree"
 alias ll='lsd -l --total-size'
 
